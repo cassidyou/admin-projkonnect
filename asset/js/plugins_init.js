@@ -1,6 +1,45 @@
 $(document).ready(function () {
 
+  if($('#livelearn-table').length > 0){
+    var table = $('#livelearn-table').DataTable({
+      searching: true,
+      paging: true,
+      select: true,
+      lengthChange: false,
+      language: {
+        paginate: {
+          next: '<i class="fa fa-angle-double-right" aria-hidden="true"></i>',
+          previous: '<i class="fa fa-angle-double-left" aria-hidden="true"></i>'
+        }
+      }
+  
+    });
+  }
+
   // var ctx = document.getElementById('progressChart').getContext('2d');
+if($('.summernote').length > 0){
+
+  $('.summernote').summernote({
+    height: 300, // Set the height of the editor
+    placeholder: 'Start typing...',
+    toolbar: [
+      // Full toolbar options
+      ['style', ['style']],
+      ['font', ['bold', 'italic', 'underline', 'clear']],
+      ['fontname', ['fontname']],
+      ['fontsize', ['fontsize']],
+      ['color', ['color']],
+      ['para', ['ul', 'ol', 'paragraph']],
+      ['height', ['height']],
+      ['table', ['table']],
+      ['insert', ['link', 'picture', 'video', 'hr']],
+      ['view', ['fullscreen', 'codeview', 'help']],
+      ['misc', ['undo', 'redo']]
+  ]
+  });
+}
+
+  $('.modal-header button.close').attr('data-bs-dismiss', 'modal');
 
   const data = {
     labels: [
@@ -165,6 +204,8 @@ $(document).ready(function () {
     lengthChange: false,
 
   });
+
+
 
 
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin - Layout</title>
+    <title>Admin - Content Management</title>
 
     <!--asset-->
     <link rel="shortcut icon" type="text/css" href="asset/img/favicon.png">
@@ -17,6 +17,7 @@
 
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="vendor/datatables/css/jquery.dataTables.min.css">
 
     <!-- Bootstrap daterangepicker -->
     <link rel="stylesheet" href="vendor/bootstrap-daterangepicker/daterangepicker.css">
@@ -82,7 +83,7 @@
                                 </a>
                             </li>
                             <li class="adm-sidebar-link-item">
-                                <a href="content-management.html" class="sidebar-link">
+                                <a href="content-management.html" class="sidebar-link active">
                                     <img src="asset/img/paper-pen-icon.png" alt="">
                                     Content Management
                                 </a>
@@ -127,7 +128,7 @@
                                 <div class="menu harmburger-menu d-lg-none">
                                     <div class="menu"></div>
                                  </div>
-                                <h1 class="heading">Courses</h1>
+                                <h1 class="heading">FAQ</h1>
                             </div>
                             <div class="d-flex align-items-center justify-content-between">
     
@@ -209,63 +210,90 @@
                             </div>
                         </div>
                         <div class="main-content">
-                              <div class="row">
-                                <div class="col-12">
-                                    <div class="mb-3">
-                                        <span class="g-sm-heading op-6">Courses <i class="fa fa-chevron-right"></i></span>
-                                        <span class="g-sm-heading op-6">Organization of Programming Languages <i class="fa fa-chevron-right"></i></span>
-                                        <span class="g-sm-heading">Quiz</span>
+                            <div class="row">
+                               <form action="">
+                                   <div class="row">
+                                       <div class="col-12 mb-4">
+                                           <div class="form-group">
+                                            <h5>Question</h5>
+                                               <input type="text" class="form-control custom " placeholder="Type question here...">
+                                           </div>
+                                       </div>
+                                       <div class="col-12 mb-4">
+                                           <div class="form-group">
+                                            <h5>Answer</h5>
+                                                <textarea name="" rows="5" placeholder="Type answer here..." class="form-control custom" id=""></textarea>
+                                           </div>
+                                       </div>
                                    </div>
-                                </div>
-                                   <div class="col-lg-8 col-md-7 mb-4">
-                                        
-                                      
-
+                                   <div class="d-flex align-items-center justify-content-between">
+                                       <a href="content-management.html" class="px-sm-5 text-center new-discussion-btn bg-danger">Discard</a>
+                                       <button type="submit" class="text-center new-discussion-btn px-sm-5" >Save</button>
                                    </div>
-                                   <div class="col-lg-4 col-md-5 mb-4">
-
-                                   </div>
+                               </form>
                               </div>
+                            </div>
                         </div>
-                    </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   
+       <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+           <div class="modal-dialog modal-sm modal-dialog-centered">
+                <div class="modal-content">
+                     <div class="modal-body rounded">
+                       <div class="d-flex align-items-center justify-content-center mb-2 mt-3">
+                           <img src="asset/img/success-star-checked.png" width="50px" alt="icon">
+                       </div>
+                          <h3 class="text-center mb-2">Success!</h3>
+                         <div class="text-center mb-2">
+                           You have successfully deactivated <h6 class="d-inline">Williams Michael</h6>
+                         </div>
+                           <button type="button" class="new-discussion-btn w-100 mb-2" data-bs-dismiss="modal">Go Back</button>
+                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+           </div>
+       </div>
+   
+       <div class="modal fade" id="internModal" tabindex="-1" aria-labelledby="internModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-sm modal-dialog-centered">
              <div class="modal-content">
                   <div class="modal-body rounded">
                     <div class="d-flex align-items-center justify-content-center mb-2 mt-3">
-                        <img src="asset/img/success-star-checked.png" width="50px" alt="icon">
+                        <div class="student-img">
+                            <img src="asset/img/team3.png" alt="icon">
+                        </div>
                     </div>
-                       <h3 class="text-center mb-2">Success!</h3>
-                      <div class="text-center mb-2">
-                        You have successfully registered for a LiveLearn Session.
-                      </div>
-                        <button type="button" class="new-discussion-btn w-100 mb-2">Go Back</button>
+                    <h6 class="text-center mb-2">Mary Williams</h6>
+                    <h5 class="text-center mb-5">Author</h5>
+                    <div class="d-flex align-items-center justify-content-between gap-4">
+                        <button type="button" data-bs-toggle="modal"
+                        data-bs-target="#successModal" class="new-discussion-btn w-100 outline-danger text-center d-block mb-2" >Deactivate</button>
+                        <a href="javascript:;" type="button" class="new-discussion-btn text-center w-100 mb-2">View</a>
+                    </div>
                   </div>
              </div>
         </div>
     </div>
-
-
-
-    <!-- JS FILES -->
-    <script src="vendor/jquery/jQuery3.6.1.min.js"></script>
-    <script src="vendor/popper/popper.js"></script>
-    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="vendor/datatables/js/jquery.dataTables.min.js"></script>
-    <script src="vendor/fontawesome/all.min.js"></script>
-    <script src="vendor/jquery-validate/jquery.validate.js"></script>
-    <script src="vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="vendor/moment/moment.min.js"></script>
-    <script src="vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- <script src="asset/js/dashboard.js"></script> -->
-    <script src="asset/js/plugins_init.js"></script>
-    <script src="asset/js/main.js"></script>
-</body>
-
-</html>
+   
+   
+   
+       <!-- JS FILES -->
+       <script src="vendor/jquery/jQuery3.6.1.min.js"></script>
+       <script src="vendor/popper/popper.js"></script>
+       <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+       <script src="vendor/datatables/js/jquery.dataTables.min.js"></script>
+       <script src="vendor/fontawesome/all.min.js"></script>
+       <script src="vendor/jquery-validate/jquery.validate.js"></script>
+       <script src="vendor/swiper/swiper-bundle.min.js"></script>
+       <script src="vendor/moment/moment.min.js"></script>
+       <script src="vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+       <!-- <script src="asset/js/dashboard.js"></script> -->
+       <script src="asset/js/plugins_init.js"></script>
+       <script src="asset/js/main.js"></script>
+   </body>
+   
+   </html>

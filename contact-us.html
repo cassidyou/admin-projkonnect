@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin - Dashboard</title>
+    <title>Admin - Contact Us</title>
 
     <!--asset-->
     <link rel="shortcut icon" type="text/css" href="asset/img/favicon.png">
@@ -17,10 +17,10 @@
 
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="vendor/datatables/css/jquery.dataTables.min.css">
 
     <!-- Bootstrap daterangepicker -->
     <link rel="stylesheet" href="vendor/bootstrap-daterangepicker/daterangepicker.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
     <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
 
@@ -47,7 +47,7 @@
                     <div class="sidebar-content">
                         <ul class="sidebar-nav-links">
                             <li class="adm-sidebar-link-item">
-                                <a href="index.html" class="sidebar-link active">
+                                <a href="index.html" class="sidebar-link">
                                     <img src="asset/img/dashboard-img.png" alt="">
                                     Dashboard
                                 </a>
@@ -95,7 +95,7 @@
                                 </a>
                             </li>
                             <li class="adm-sidebar-link-item">
-                                <a href="contact-us.html" class="sidebar-link">
+                                <a href="contact-us.html" class="sidebar-link active">
                                     <i class="fa fa-phone-alt" style="margin-right: 5px;"></i>
                                     Contanct Us
                                 </a>
@@ -128,7 +128,7 @@
                                 <div class="menu harmburger-menu d-lg-none">
                                     <div class="menu"></div>
                                  </div>
-                                <h1 class="heading">Welcome back!</h1>
+                                <h1 class="heading">Contact Us</h1>
                             </div>
                             <div class="d-flex align-items-center justify-content-between">
     
@@ -211,89 +211,10 @@
                         </div>
                         <div class="main-content">
                          <div class="row">
-                          <div class="col-12 mb-5">
-                           <div class="swiper dashboard-swiper">
-                               <div class="swiper-wrapper">
-                                   <div class="swiper-slide">
-                                       <div class="std-dsb-card">
-                                           <p class="card-head">Total Students</p>
-                                           <h1 class="card-body">254554</h1>
-                                       </div>
-                                   </div>
-                                   <div class="swiper-slide">
-                                       <div class="std-dsb-card">
-                                           <p class="card-head">Total Proguides</p>
-                                           <h1 class="card-body">5487</h1>
-                                       </div>
-                                   </div>
-                                   <div class="swiper-slide">
-                                       <div class="std-dsb-card">
-                                           <p class="card-head">Total Employers</p>
-                                           <h1 class="card-body">542214</h1>
-                                       </div>
-                                   </div>
-                                   <div class="swiper-slide">
-                                       <div class="std-dsb-card">
-                                           <p class="card-head">Revenue Generated</p>
-                                           <h1 class="card-body">$548,458</h1>
-                                       </div>
-                                   </div>
-                               </div>
-                           </div>
-                          </div>
-                          <div class="col-12 mb-4">
-                           <div class="row align-items-stretch">
-                               <div class="col-md-7 mb-3">
-                                   <div class="ckt-card curr-card">
-                                       <div class="d-flex flex-wrap align-items-center justify-content-between mb-5">
-                                           <div>
-                                               <h6>Users</h6>
-                                           </div>
-                                           <div class="chart-filter">
-                                               <div>
-                                                   <select name="" id="" class="custom-select op-6">
-                                                       <option value="">Weekly</option>
-                                                       <option value="">Monthly</option>
-                                                       <option value="">Yearly</option>
-                                                   </select>
-                                               </div>
-                                               <div>
-                                                   <img src="asset/img/calender-img.png" alt=""> &nbsp;
-                                                   <input type="text" class="custom-select" style="width: 90px;" data-provide="datepicker" placeholder="Select dates">
-                                               </div>
-                                           </div>
-                                       </div>
-                                       <canvas id="userChart"></canvas>
-                                   </div>
-
-                               </div>
-                               <div class="col-md-5 mb-3">
-                                   <div class="ckt-card curr-card">
-                                        <div class="d-flex flex-wrap align-items-center justify-content-between mb-5">
-                                            <div>
-                                                <h6>Overall Report</h6>
-                                            </div>
-                                            <div class="chart-filter">
-                                                <div>
-                                                    <select name="" id="" class="custom-select op-6">
-                                                        <option value="">Weekly</option>
-                                                        <option value="">Monthly</option>
-                                                        <option value="">Yearly</option>
-                                                    </select>
-                                                </div>
-                                                <div>
-                                                    <img src="asset/img/calender-img.png" alt=""> &nbsp;
-                                                    <input type="text" class="custom-select" style="width: 90px;" data-provide="datepicker" placeholder="Select dates">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <canvas id="overallChart"></canvas>
-                                    </div>
-                               </div>
-                           </div>
-                          </div>
+                              <div class="col-12 mb-5 mt-2">
+                                   <a href="new-bulk-email.html" class="new-discussion-btn bg-dark"><img src="asset/img/plus-with-bg.png" alt=""> &nbsp; New Bulk Email</a>
+                              </div>
                           <div class="col-lg-12 mb-4">
-                           <h5>Recent Users</h5>
                            <div class="table-responsive">
                                 <table class="table" id="livelearn-table">
                                      <thead>
@@ -311,14 +232,16 @@
                                                    </div>
                                                </div>
                                           </th>
-                                          <th>Sign Up Date</th>
-                                          <th>Subscription Plan </th>
-                                          <th>Type</th>
+                                          <th>Date Published</th>
+                                          <th>Email </th>
+                                          <th>Phone Number</th>
+                                          <th>Type of Inquiry</th>
                                           <th></th>
                                      </thead>
                                     <tbody>
                                      <tr>
-                                          <td>
+                                          <td data-bs-toggle="modal"
+                                          data-bs-target="#internModal" class="cursor-p">
                                                <div class="d-flex align-items-center gap-2">
                                                    <div
                                                        class="form-check custom-checkbox checkbox-success check-lg">
@@ -328,18 +251,21 @@
                                                            for="customCheckBox8"></label>
                                                    </div>
                                                    <div class="apt_ful">
-                                                       <span> John Doe</span>
+                                                       <span> Michael Williams</span>
                                                    </div>
                                                </div>
 
                                           </td>
-                                          <td>March 23, 2024 12:00PM </td>
-                                          <td>Premium</td>
-                                          <td><span class="live-badge primary">Student</span></td>
-                                          <td><i class="fa fa-ellipsis-h"></i></td>
+                                          <td>March 22, 2023 12:00Pm</td>
+                                          <td>john@domain.com</td>
+                                          <td>+234 873 8983 898</td>
+                                          <td>Profile Upldate & verification</td>
+                                          <td data-bs-toggle="modal"
+                                          data-bs-target="#internModal"><i class="fa fa-ellipsis-h cursor-p"></i></td>
                                      </tr>
                                      <tr>
-                                          <td>
+                                          <td data-bs-toggle="modal"
+                                          data-bs-target="#internModal" class="cursor-p">
                                                <div class="d-flex align-items-center gap-2">
                                                    <div
                                                        class="form-check custom-checkbox checkbox-success check-lg">
@@ -349,18 +275,21 @@
                                                            for="customCheckBox8"></label>
                                                    </div>
                                                    <div class="apt_ful">
-                                                       <span> John Doe</span>
+                                                       <span> Michael Williams</span>
                                                    </div>
                                                </div>
 
                                           </td>
-                                          <td>March 23, 2024 12:00PM </td>
-                                          <td>Free</td>
-                                          <td><span class="live-badge warning">Proguide</span></td>
-                                          <td><i class="fa fa-ellipsis-h"></i></td>
+                                          <td>March 22, 2023 12:00Pm</td>
+                                          <td>john@domain.com</td>
+                                          <td>+234 873 8983 898</td>
+                                          <td>Profile Upldate & verification</td>
+                                          <td data-bs-toggle="modal"
+                                          data-bs-target="#internModal"><i class="fa fa-ellipsis-h cursor-p"></i></td>
                                      </tr>
                                      <tr>
-                                          <td>
+                                          <td data-bs-toggle="modal"
+                                          data-bs-target="#internModal" class="cursor-p">
                                                <div class="d-flex align-items-center gap-2">
                                                    <div
                                                        class="form-check custom-checkbox checkbox-success check-lg">
@@ -370,22 +299,120 @@
                                                            for="customCheckBox8"></label>
                                                    </div>
                                                    <div class="apt_ful">
-                                                       <span> John Doe</span>
+                                                       <span> Michael Williams</span>
                                                    </div>
                                                </div>
 
                                           </td>
-                                          <td>March 23, 2024 12:00PM </td>
-                                          <td>Premium Plus</td>
-                                          <td><span class="live-badge secondary">Employer</span></td>
-                                          <td><i class="fa fa-ellipsis-h"></i></td>
+                                          <td>March 22, 2023 12:00Pm</td>
+                                          <td>john@domain.com</td>
+                                          <td>+234 873 8983 898</td>
+                                          <td>Profile Upldate & verification</td>
+                                          <td data-bs-toggle="modal"
+                                          data-bs-target="#internModal"><i class="fa fa-ellipsis-h cursor-p"></i></td>
+                                     </tr>
+                                     <tr>
+                                          <td data-bs-toggle="modal"
+                                          data-bs-target="#internModal" class="cursor-p">
+                                               <div class="d-flex align-items-center gap-2">
+                                                   <div
+                                                       class="form-check custom-checkbox checkbox-success check-lg">
+                                                       <input type="checkbox" class="form-check-input"
+                                                           id="customCheckBox8">
+                                                       <label class="form-check-label"
+                                                           for="customCheckBox8"></label>
+                                                   </div>
+                                                   <div class="apt_ful">
+                                                       <span> Michael Williams</span>
+                                                   </div>
+                                               </div>
+
+                                          </td>
+                                          <td>March 22, 2023 12:00Pm</td>
+                                          <td>john@domain.com</td>
+                                          <td>+234 873 8983 898</td>
+                                          <td>Profile Upldate & verification</td>
+                                          <td data-bs-toggle="modal"
+                                          data-bs-target="#internModal"><i class="fa fa-ellipsis-h cursor-p"></i></td>
+                                     </tr>
+                                     <tr>
+                                          <td data-bs-toggle="modal"
+                                          data-bs-target="#internModal" class="cursor-p">
+                                               <div class="d-flex align-items-center gap-2">
+                                                   <div
+                                                       class="form-check custom-checkbox checkbox-success check-lg">
+                                                       <input type="checkbox" class="form-check-input"
+                                                           id="customCheckBox8">
+                                                       <label class="form-check-label"
+                                                           for="customCheckBox8"></label>
+                                                   </div>
+                                                   <div class="apt_ful">
+                                                       <span> Michael Williams</span>
+                                                   </div>
+                                               </div>
+
+                                          </td>
+                                          <td>March 22, 2023 12:00Pm</td>
+                                          <td>john@domain.com</td>
+                                          <td>+234 873 8983 898</td>
+                                          <td>Profile Upldate & verification</td>
+                                          <td data-bs-toggle="modal"
+                                          data-bs-target="#internModal"><i class="fa fa-ellipsis-h cursor-p"></i></td>
+                                     </tr>
+                                     <tr>
+                                          <td data-bs-toggle="modal"
+                                          data-bs-target="#internModal" class="cursor-p">
+                                               <div class="d-flex align-items-center gap-2">
+                                                   <div
+                                                       class="form-check custom-checkbox checkbox-success check-lg">
+                                                       <input type="checkbox" class="form-check-input"
+                                                           id="customCheckBox8">
+                                                       <label class="form-check-label"
+                                                           for="customCheckBox8"></label>
+                                                   </div>
+                                                   <div class="apt_ful">
+                                                       <span> Michael Williams</span>
+                                                   </div>
+                                               </div>
+
+                                          </td>
+                                          <td>March 22, 2023 12:00Pm</td>
+                                          <td>john@domain.com</td>
+                                          <td>+234 873 8983 898</td>
+                                          <td>Profile Upldate & verification</td>
+                                          <td data-bs-toggle="modal"
+                                          data-bs-target="#internModal"><i class="fa fa-ellipsis-h cursor-p"></i></td>
+                                     </tr>
+                                     <tr>
+                                          <td data-bs-toggle="modal"
+                                          data-bs-target="#internModal" class="cursor-p">
+                                               <div class="d-flex align-items-center gap-2">
+                                                   <div
+                                                       class="form-check custom-checkbox checkbox-success check-lg">
+                                                       <input type="checkbox" class="form-check-input"
+                                                           id="customCheckBox8">
+                                                       <label class="form-check-label"
+                                                           for="customCheckBox8"></label>
+                                                   </div>
+                                                   <div class="apt_ful">
+                                                       <span> Michael Williams</span>
+                                                   </div>
+                                               </div>
+
+                                          </td>
+                                          <td>March 22, 2023 12:00Pm</td>
+                                          <td>john@domain.com</td>
+                                          <td>+234 873 8983 898</td>
+                                          <td>Profile Upldate & verification</td>
+                                          <td data-bs-toggle="modal"
+                                          data-bs-target="#internModal"><i class="fa fa-ellipsis-h cursor-p"></i></td>
                                      </tr>
                                     </tbody>
                                 </table>
                            </div>
                            </div>
                          </div>
-                   </div>
+                     </div>
                     </div>
                 </div>
             </div>
@@ -401,12 +428,26 @@
                     </div>
                        <h3 class="text-center mb-2">Success!</h3>
                       <div class="text-center mb-2">
-                        You have successfully registered for a LiveLearn Session.
+                        You have successfully deactivated <h6 class="d-inline">Williams Michael</h6>
                       </div>
-                        <button type="button" class="new-discussion-btn w-100 mb-2">Go Back</button>
+                        <button type="button" class="new-discussion-btn w-100 mb-2" data-bs-dismiss="modal">Go Back</button>
                   </div>
              </div>
         </div>
+    </div>
+
+    <div class="modal fade" id="internModal" tabindex="-1" aria-labelledby="internModalLabel" aria-hidden="true">
+     <div class="modal-dialog modal-sm modal-dialog-centered">
+          <div class="modal-content">
+               <div class="modal-body rounded">
+                 <h4 class="text-center mb-5">Profile Update & verification</h4>
+                 <div class="d-flex align-items-center justify-content-between gap-2 flex-column">
+                      <a href="contact-us-message.html" type="button" class="new-discussion-btn text-center w-100 mb-2">View</a>
+                      <button type="button" data-bs-dismiss="modal"  class="new-discussion-btn w-100 outline-danger text-center d-block mb-2" >Back</button>
+                 </div>
+               </div>
+          </div>
+     </div>
     </div>
 
 
@@ -421,18 +462,10 @@
     <script src="vendor/swiper/swiper-bundle.min.js"></script>
     <script src="vendor/moment/moment.min.js"></script>
     <script src="vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
-    <script src="vendor/bootstrap-datepicker/bootstrap-datepicker.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="asset/js/dashboard.js"></script>
+    <!-- <script src="asset/js/dashboard.js"></script> -->
     <script src="asset/js/plugins_init.js"></script>
     <script src="asset/js/main.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('#livelearn-table_filter').addClass('d-none');
-            $('#livelearn-table_paginate').addClass('d-none');
-            $('#livelearn-table_info').addClass('d-none');
-        });
-    </script>
 </body>
 
 </html>

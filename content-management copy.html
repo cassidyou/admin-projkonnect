@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin - Dashboard</title>
+    <title>Admin - Content Management</title>
 
     <!--asset-->
     <link rel="shortcut icon" type="text/css" href="asset/img/favicon.png">
@@ -20,13 +20,16 @@
 
     <!-- Bootstrap daterangepicker -->
     <link rel="stylesheet" href="vendor/bootstrap-daterangepicker/daterangepicker.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
     <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.16/summernote.min.css" integrity="sha512-D9apeq3vpISw+tU5g1dTwOZJfNGFO248q9nZhDTXchteC3QXadZFKXBb5WhaiOiIptnG31Lq6SuEK4P28XBrBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!--Custom CSS-->
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    
+    
+    <!--Custom CSS-->
     <link rel="stylesheet" href="asset/css/style.css">
     <link rel="stylesheet" href="asset/css/admin.css">
     <link rel="stylesheet" href="asset/css/responsive.css">
@@ -47,7 +50,7 @@
                     <div class="sidebar-content">
                         <ul class="sidebar-nav-links">
                             <li class="adm-sidebar-link-item">
-                                <a href="index.html" class="sidebar-link active">
+                                <a href="index.html" class="sidebar-link">
                                     <img src="asset/img/dashboard-img.png" alt="">
                                     Dashboard
                                 </a>
@@ -83,7 +86,7 @@
                                 </a>
                             </li>
                             <li class="adm-sidebar-link-item">
-                                <a href="content-management.html" class="sidebar-link">
+                                <a href="content-management.html" class="sidebar-link active">
                                     <img src="asset/img/paper-pen-icon.png" alt="">
                                     Content Management
                                 </a>
@@ -128,7 +131,7 @@
                                 <div class="menu harmburger-menu d-lg-none">
                                     <div class="menu"></div>
                                  </div>
-                                <h1 class="heading">Welcome back!</h1>
+                                <h1 class="heading">Content Management</h1>
                             </div>
                             <div class="d-flex align-items-center justify-content-between">
     
@@ -210,182 +213,75 @@
                             </div>
                         </div>
                         <div class="main-content">
-                         <div class="row">
-                          <div class="col-12 mb-5">
-                           <div class="swiper dashboard-swiper">
-                               <div class="swiper-wrapper">
-                                   <div class="swiper-slide">
-                                       <div class="std-dsb-card">
-                                           <p class="card-head">Total Students</p>
-                                           <h1 class="card-body">254554</h1>
-                                       </div>
-                                   </div>
-                                   <div class="swiper-slide">
-                                       <div class="std-dsb-card">
-                                           <p class="card-head">Total Proguides</p>
-                                           <h1 class="card-body">5487</h1>
-                                       </div>
-                                   </div>
-                                   <div class="swiper-slide">
-                                       <div class="std-dsb-card">
-                                           <p class="card-head">Total Employers</p>
-                                           <h1 class="card-body">542214</h1>
-                                       </div>
-                                   </div>
-                                   <div class="swiper-slide">
-                                       <div class="std-dsb-card">
-                                           <p class="card-head">Revenue Generated</p>
-                                           <h1 class="card-body">$548,458</h1>
-                                       </div>
-                                   </div>
-                               </div>
-                           </div>
-                          </div>
-                          <div class="col-12 mb-4">
-                           <div class="row align-items-stretch">
-                               <div class="col-md-7 mb-3">
-                                   <div class="ckt-card curr-card">
-                                       <div class="d-flex flex-wrap align-items-center justify-content-between mb-5">
-                                           <div>
-                                               <h6>Users</h6>
-                                           </div>
-                                           <div class="chart-filter">
-                                               <div>
-                                                   <select name="" id="" class="custom-select op-6">
-                                                       <option value="">Weekly</option>
-                                                       <option value="">Monthly</option>
-                                                       <option value="">Yearly</option>
-                                                   </select>
-                                               </div>
-                                               <div>
-                                                   <img src="asset/img/calender-img.png" alt=""> &nbsp;
-                                                   <input type="text" class="custom-select" style="width: 90px;" data-provide="datepicker" placeholder="Select dates">
-                                               </div>
-                                           </div>
-                                       </div>
-                                       <canvas id="userChart"></canvas>
-                                   </div>
-
-                               </div>
-                               <div class="col-md-5 mb-3">
-                                   <div class="ckt-card curr-card">
-                                        <div class="d-flex flex-wrap align-items-center justify-content-between mb-5">
-                                            <div>
-                                                <h6>Overall Report</h6>
-                                            </div>
-                                            <div class="chart-filter">
-                                                <div>
-                                                    <select name="" id="" class="custom-select op-6">
-                                                        <option value="">Weekly</option>
-                                                        <option value="">Monthly</option>
-                                                        <option value="">Yearly</option>
-                                                    </select>
-                                                </div>
-                                                <div>
-                                                    <img src="asset/img/calender-img.png" alt=""> &nbsp;
-                                                    <input type="text" class="custom-select" style="width: 90px;" data-provide="datepicker" placeholder="Select dates">
-                                                </div>
+                              <div class="row">
+                                   <div class="col-12 mb-5">
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <h4>Frequently Asked Questions (FAQs)</h4>
+                                        <button type="button" id="add-faq-btn" class="add-faq-btn new-discussion-btn" style="padding:0 2px"><i class="fa fa-plus"></i></button>
+                                    </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <form action="">
+                                                    <div id="faq-container">
+                                                        <div class="question-container mb-5">
+                                                            <div class="row">
+                                                                <div class="col-11">
+                                                                    <div class="form-group mb-3">
+                                                                        <h6>Question</h6>
+                                                                        <input type="text" name="" value="Is there a free trial available?" class="form-control">
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <h6>Answer</h6>
+                                                                        <textarea name="" class="form-control" placeholder="Enter answer" rows="5">Yes you can try us for free for 30 days. If you want, we'll provide you witha a free, personalized 30-minutes onboarding call to get you up and running as soon as possible.</textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-1 text-end">
+                                                                    <span class="trash-faq cursor-p text-danger"><i class="fa fa-trash"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="question-container mb-5">
+                                                            <div class="row">
+                                                                <div class="col-11">
+                                                                    <div class="form-group mb-3">
+                                                                        <h6>Question</h6>
+                                                                        <input type="text" name="" placeholder="Enter question"  class="form-control">
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <h6>Answer</h6>
+                                                                        <textarea name="" class="form-control" placeholder="Enter answer" rows="5"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-1 text-end">
+                                                                    <span class="trash-faq cursor-p text-danger"><i class="fa fa-trash"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="d-flex align-items-center justify-content-end mt-4">
+                                                        <!-- <button type="button"  class="new-discussion-btn bg-danger"></button> -->
+                                                        <button type="submit" id="save-faq-btn" class="new-discussion-btn">Save Changes</button>
+                                                    </div>
+                                                </form>
                                             </div>
                                         </div>
-                                        <canvas id="overallChart"></canvas>
+                                   </div>
+                                   <div class="col-12 mb-4">
+                                    <h4>Terms and Conditions</h4>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <form action="">
+                                                <textarea name="editorData" id="summernote" rows="10"></textarea>
+                                                <div class="text-end mt-4">
+                                                    <button class="new-discussion-btn">Save Changes</button>
+                                                </div>
+                                            </form>
+                                        </div>
                                     </div>
-                               </div>
-                           </div>
-                          </div>
-                          <div class="col-lg-12 mb-4">
-                           <h5>Recent Users</h5>
-                           <div class="table-responsive">
-                                <table class="table" id="livelearn-table">
-                                     <thead>
-                                          <th>
-                                               <div class="d-flex align-items-center gap-2">
-                                                   <div
-                                                       class="form-check custom-checkbox checkbox-success check-lg">
-                                                       <input type="checkbox" class="form-check-input"
-                                                           id="customCheckBox8">
-                                                       <label class="form-check-label"
-                                                           for="customCheckBox8"></label>
-                                                   </div>
-                                                   <div class="apt_ful">
-                                                       <span> Name</span>
-                                                   </div>
-                                               </div>
-                                          </th>
-                                          <th>Sign Up Date</th>
-                                          <th>Subscription Plan </th>
-                                          <th>Type</th>
-                                          <th></th>
-                                     </thead>
-                                    <tbody>
-                                     <tr>
-                                          <td>
-                                               <div class="d-flex align-items-center gap-2">
-                                                   <div
-                                                       class="form-check custom-checkbox checkbox-success check-lg">
-                                                       <input type="checkbox" class="form-check-input"
-                                                           id="customCheckBox8">
-                                                       <label class="form-check-label"
-                                                           for="customCheckBox8"></label>
-                                                   </div>
-                                                   <div class="apt_ful">
-                                                       <span> John Doe</span>
-                                                   </div>
-                                               </div>
-
-                                          </td>
-                                          <td>March 23, 2024 12:00PM </td>
-                                          <td>Premium</td>
-                                          <td><span class="live-badge primary">Student</span></td>
-                                          <td><i class="fa fa-ellipsis-h"></i></td>
-                                     </tr>
-                                     <tr>
-                                          <td>
-                                               <div class="d-flex align-items-center gap-2">
-                                                   <div
-                                                       class="form-check custom-checkbox checkbox-success check-lg">
-                                                       <input type="checkbox" class="form-check-input"
-                                                           id="customCheckBox8">
-                                                       <label class="form-check-label"
-                                                           for="customCheckBox8"></label>
-                                                   </div>
-                                                   <div class="apt_ful">
-                                                       <span> John Doe</span>
-                                                   </div>
-                                               </div>
-
-                                          </td>
-                                          <td>March 23, 2024 12:00PM </td>
-                                          <td>Free</td>
-                                          <td><span class="live-badge warning">Proguide</span></td>
-                                          <td><i class="fa fa-ellipsis-h"></i></td>
-                                     </tr>
-                                     <tr>
-                                          <td>
-                                               <div class="d-flex align-items-center gap-2">
-                                                   <div
-                                                       class="form-check custom-checkbox checkbox-success check-lg">
-                                                       <input type="checkbox" class="form-check-input"
-                                                           id="customCheckBox8">
-                                                       <label class="form-check-label"
-                                                           for="customCheckBox8"></label>
-                                                   </div>
-                                                   <div class="apt_ful">
-                                                       <span> John Doe</span>
-                                                   </div>
-                                               </div>
-
-                                          </td>
-                                          <td>March 23, 2024 12:00PM </td>
-                                          <td>Premium Plus</td>
-                                          <td><span class="live-badge secondary">Employer</span></td>
-                                          <td><i class="fa fa-ellipsis-h"></i></td>
-                                     </tr>
-                                    </tbody>
-                                </table>
-                           </div>
-                           </div>
-                         </div>
-                   </div>
+                                   </div>
+                              </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -417,21 +313,56 @@
     <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="vendor/datatables/js/jquery.dataTables.min.js"></script>
     <script src="vendor/fontawesome/all.min.js"></script>
+    <script src="vendor/summernote/summernote1.js"></script>
     <script src="vendor/jquery-validate/jquery.validate.js"></script>
     <script src="vendor/swiper/swiper-bundle.min.js"></script>
     <script src="vendor/moment/moment.min.js"></script>
     <script src="vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
-    <script src="vendor/bootstrap-datepicker/bootstrap-datepicker.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="asset/js/dashboard.js"></script>
+    <!-- <script src="asset/js/dashboard.js"></script> -->
     <script src="asset/js/plugins_init.js"></script>
     <script src="asset/js/main.js"></script>
     <script>
         $(document).ready(function(){
-            $('#livelearn-table_filter').addClass('d-none');
-            $('#livelearn-table_paginate').addClass('d-none');
-            $('#livelearn-table_info').addClass('d-none');
-        });
+            $('#summernote').summernote({
+                    placeholder: 'Type here....',
+                    tabsize: 3,
+                    height: 'auto',
+                    minHeight: 300
+               });
+
+            $('#add-faq-btn').on('click', function(){
+                let html = `
+                    <div class="question-container mb-5">
+                        <div class="row">
+                            <div class="col-11">
+                                <div class="form-group mb-3">
+                                    <h6>Question</h6>
+                                    <input type="text" name="" placeholder="Enter question"  class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <h6>Answer</h6>
+                                    <textarea name="" class="form-control" placeholder="Enter answer" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-1 text-end">
+                                <span class="trash-faq cursor-p text-danger"><i class="fa fa-trash"></i></span>
+                            </div>
+                        </div>
+                    </div>  
+                `;
+
+                $('#faq-container').append(html);
+                $('#save-faq-btn').removeClass('d-none');
+            })
+
+            $('body').on('click', '.trash-faq', function(){
+                $(this).parents('.question-container').remove();
+                let faqs = $('.question-container').length;
+                
+                faqs < 1 ? $('#save-faq-btn').addClass('d-none') : $('#save-faq-btn').removeClass('d-none');
+            });
+        })
     </script>
 </body>
 

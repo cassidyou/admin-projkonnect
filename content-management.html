@@ -56,6 +56,18 @@
                                 </a>
                             </li>
                             <li class="adm-sidebar-link-item">
+                                <a href="authors.html" class="sidebar-link">
+                                    <img src="asset/img/users-icon.png" alt="">
+                                    Authors
+                                </a>
+                            </li>
+                            <li class="adm-sidebar-link-item">
+                                <a href="blog.html" class="sidebar-link">
+                                    <img src="asset/img/users-icon.png" alt="">
+                                   Blog
+                                </a>
+                            </li>
+                            <li class="adm-sidebar-link-item">
                                 <a href="user-management.html" class="sidebar-link">
                                     <img src="asset/img/users-icon.png" alt="">
                                     User Management
@@ -80,15 +92,27 @@
                                 </a>
                             </li>
                             <li class="adm-sidebar-link-item">
-                                <a href="analytics.html" class="sidebar-link">
-                                    <img src="asset/img/analytics-icon.png" alt="">
-                                    Analytics
+                                <a href="withdrawal-request.html" class="sidebar-link">
+                                    <img src="asset/img/dollar-sub-icon.png" alt="">
+                                    Withdrawal Requests
                                 </a>
                             </li>
                             <li class="adm-sidebar-link-item">
-                                <a href="configurations.html" class="sidebar-link">
-                                    <img src="asset/img/config-icon.png" alt="">
-                                   Configurations
+                                <a href="contact-us.html" class="sidebar-link">
+                                    <i class="fa fa-phone-alt" style="margin-right: 5px;"></i>
+                                    Contanct Us
+                                </a>
+                            </li>
+                            <li class="adm-sidebar-link-item">
+                                <a href="reports.html" class="sidebar-link">
+                                    <img src="asset/img/report-icon.png" style="width: 15px!important;" alt="">
+                                    Reports
+                                </a>
+                            </li>
+                            <li class="adm-sidebar-link-item">
+                                <a href="settings.html" class="sidebar-link">
+                                    <i class="fa fa-cog" style="margin-right: 5px;"></i>
+                                    Settings
                                 </a>
                             </li>
                         </ul>
@@ -191,50 +215,79 @@
                         <div class="main-content">
                               <div class="row">
                                    <div class="col-12 mb-5">
-                                    <h4>Frequently Asked Questions (FAQs)</h4>
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <h4>Frequently Asked Questions (FAQs)</h4>
+                                        <a href="create-faq.html" id="add-faq-btn" class="add-faq-btn new-discussion-btn" style="padding:2px"><i class="fa fa-plus"></i></a>
+                                    </div>
                                         <div class="card">
-                                            <div class="card-body">
+                                            <div class="card-body p-3">
                                                 <form action="">
                                                     <div id="faq-container">
-                                                        <div class="question-container mb-5">
-                                                            <div class="row">
-                                                                <div class="col-11">
-                                                                    <div class="form-group mb-3">
-                                                                        <h6>Question</h6>
-                                                                        <input type="text" name="" value="Is there a free trial available?" class="form-control">
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <h6>Answer</h6>
-                                                                        <textarea name="" class="form-control" placeholder="Enter answer" rows="5">Yes you can try us for free for 30 days. If you want, we'll provide you witha a free, personalized 30-minutes onboarding call to get you up and running as soon as possible.</textarea>
+                                                        <div class="question-container">
+                                                                <div class="qua-ctn">
+                                                                    <h5>Is there a free trial available?</h5>
+                                                                    <div class="faq-answer opened overflow-hidden">
+                                                                        Yes, you can try us for free for 30 days. If you want, we'll provide you with a free, 
+                                                                        personalized 30-minute onboarding call to get you up and running as soon as possible.
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-1 text-end">
+                                                                <div style="min-width: 50px;">
+                                                                    <a href="edit-faq.html" class="mx-2"><i class="fa fa-pen"></i></a>
                                                                     <span class="trash-faq cursor-p text-danger"><i class="fa fa-trash"></i></span>
                                                                 </div>
-                                                            </div>
                                                         </div>
-                                                        <div class="question-container mb-5">
-                                                            <div class="row">
-                                                                <div class="col-11">
-                                                                    <div class="form-group mb-3">
-                                                                        <h6>Question</h6>
-                                                                        <input type="text" name="" placeholder="Enter question"  class="form-control">
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <h6>Answer</h6>
-                                                                        <textarea name="" class="form-control" placeholder="Enter answer" rows="5"></textarea>
+                                                        <div class="question-container">
+                                                                <div class="qua-ctn">
+                                                                    <h5>Is there a free trial available?</h5>
+                                                                    <div class="faq-answer closed overflow-hidden">
+                                                                        Yes, you can try us for free for 30 days. If you want, we'll provide you with a free, 
+                                                                        personalized 30-minute onboarding call to get you up and running as soon as possible.
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-1 text-end">
+                                                                <div style="min-width: 50px;">
+                                                                    <a href="edit-faq.html" class="mx-2"><i class="fa fa-pen"></i></a>
                                                                     <span class="trash-faq cursor-p text-danger"><i class="fa fa-trash"></i></span>
                                                                 </div>
-                                                            </div>
                                                         </div>
-                                                        
-                                                    </div>
-                                                    <div class="d-flex align-items-center justify-content-between mt-4">
-                                                        <button type="button" id="add-faq-btn" class="new-discussion-btn" style="padding:0 2px"><img src="asset/img/plus-with-bg.png" alt=""></button>
-                                                        <button type="submit" id="save-faq-btn" class="new-discussion-btn">Save Changes</button>
+                                                        <div class="question-container">
+                                                                <div class="qua-ctn">
+                                                                    <h5>Is there a free trial available?</h5>
+                                                                    <div class="faq-answer closed overflow-hidden">
+                                                                        Yes, you can try us for free for 30 days. If you want, we'll provide you with a free, 
+                                                                        personalized 30-minute onboarding call to get you up and running as soon as possible.
+                                                                    </div>
+                                                                </div>
+                                                                <div style="min-width: 50px;">
+                                                                    <a href="edit-faq.html" class="mx-2"><i class="fa fa-pen"></i></a>
+                                                                    <span class="trash-faq cursor-p text-danger"><i class="fa fa-trash"></i></span>
+                                                                </div>
+                                                        </div>
+                                                        <div class="question-container">
+                                                                <div class="qua-ctn">
+                                                                    <h5>Is there a free trial available?</h5>
+                                                                    <div class="faq-answer closed overflow-hidden">
+                                                                        Yes, you can try us for free for 30 days. If you want, we'll provide you with a free, 
+                                                                        personalized 30-minute onboarding call to get you up and running as soon as possible.
+                                                                    </div>
+                                                                </div>
+                                                                <div style="min-width: 50px;">
+                                                                    <a href="edit-faq.html" class="mx-2"><i class="fa fa-pen"></i></a>
+                                                                    <span class="trash-faq cursor-p text-danger"><i class="fa fa-trash"></i></span>
+                                                                </div>
+                                                        </div>
+                                                        <div class="question-container">
+                                                                <div class="qua-ctn">
+                                                                    <h5>Is there a free trial available?</h5>
+                                                                    <div class="faq-answer closed overflow-hidden">
+                                                                        Yes, you can try us for free for 30 days. If you want, we'll provide you with a free, 
+                                                                        personalized 30-minute onboarding call to get you up and running as soon as possible.
+                                                                    </div>
+                                                                </div>
+                                                                <div style="min-width: 50px;">
+                                                                    <a href="edit-faq.html" class="mx-2"><i class="fa fa-pen"></i></a>
+                                                                    <span class="trash-faq cursor-p text-danger"><i class="fa fa-trash"></i></span>
+                                                                </div>
+                                                        </div>
                                                     </div>
                                                 </form>
                                             </div>
@@ -334,6 +387,23 @@
                 let faqs = $('.question-container').length;
                 
                 faqs < 1 ? $('#save-faq-btn').addClass('d-none') : $('#save-faq-btn').removeClass('d-none');
+            });
+
+
+            $('.qua-ctn').on('click', function(){
+                var faq = $(this).children('.faq-answer');
+
+                
+
+                if(faq.hasClass('opened')){
+                    faq.removeClass('opened');
+                    faq.addClass('closed');
+                }else if(faq.hasClass('closed')){
+                    $('.faq-answer').addClass('closed');
+                    $('.faq-answer').removeClass('opened');
+                    faq.removeClass('closed');
+                    faq.addClass('opened');
+                }
             });
         })
     </script>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin - Dashboard</title>
+    <title>Admin - New Blog</title>
 
     <!--asset-->
     <link rel="shortcut icon" type="text/css" href="asset/img/favicon.png">
@@ -17,12 +17,18 @@
 
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="vendor/datatables/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs5.min.css" integrity="sha512-ngQ4IGzHQ3s/Hh8kMyG4FC74wzitukRMIcTOoKT3EyzFZCILOPF0twiXOQn75eDINUfKBYmzYn2AA8DkAk8veQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
     <!-- Bootstrap daterangepicker -->
     <link rel="stylesheet" href="vendor/bootstrap-daterangepicker/daterangepicker.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
     <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.css"
+    integrity="sha512-In/+MILhf6UMDJU4ZhDL0R0fEpsp4D3Le23m6+ujDWXwl3whwpucJG1PEmI3B07nyJx+875ccs+yX2CqQJUxUw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <!--Custom CSS-->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
@@ -47,7 +53,7 @@
                     <div class="sidebar-content">
                         <ul class="sidebar-nav-links">
                             <li class="adm-sidebar-link-item">
-                                <a href="index.html" class="sidebar-link active">
+                                <a href="index.html" class="sidebar-link">
                                     <img src="asset/img/dashboard-img.png" alt="">
                                     Dashboard
                                 </a>
@@ -59,7 +65,7 @@
                                 </a>
                             </li>
                             <li class="adm-sidebar-link-item">
-                                <a href="blog.html" class="sidebar-link">
+                                <a href="blog.html" class="sidebar-link active">
                                     <img src="asset/img/users-icon.png" alt="">
                                    Blog
                                 </a>
@@ -128,7 +134,7 @@
                                 <div class="menu harmburger-menu d-lg-none">
                                     <div class="menu"></div>
                                  </div>
-                                <h1 class="heading">Welcome back!</h1>
+                                <h1 class="heading">Blog</h1>
                             </div>
                             <div class="d-flex align-items-center justify-content-between">
     
@@ -211,179 +217,43 @@
                         </div>
                         <div class="main-content">
                          <div class="row">
-                          <div class="col-12 mb-5">
-                           <div class="swiper dashboard-swiper">
-                               <div class="swiper-wrapper">
-                                   <div class="swiper-slide">
-                                       <div class="std-dsb-card">
-                                           <p class="card-head">Total Students</p>
-                                           <h1 class="card-body">254554</h1>
-                                       </div>
-                                   </div>
-                                   <div class="swiper-slide">
-                                       <div class="std-dsb-card">
-                                           <p class="card-head">Total Proguides</p>
-                                           <h1 class="card-body">5487</h1>
-                                       </div>
-                                   </div>
-                                   <div class="swiper-slide">
-                                       <div class="std-dsb-card">
-                                           <p class="card-head">Total Employers</p>
-                                           <h1 class="card-body">542214</h1>
-                                       </div>
-                                   </div>
-                                   <div class="swiper-slide">
-                                       <div class="std-dsb-card">
-                                           <p class="card-head">Revenue Generated</p>
-                                           <h1 class="card-body">$548,458</h1>
-                                       </div>
-                                   </div>
-                               </div>
-                           </div>
-                          </div>
-                          <div class="col-12 mb-4">
-                           <div class="row align-items-stretch">
-                               <div class="col-md-7 mb-3">
-                                   <div class="ckt-card curr-card">
-                                       <div class="d-flex flex-wrap align-items-center justify-content-between mb-5">
-                                           <div>
-                                               <h6>Users</h6>
-                                           </div>
-                                           <div class="chart-filter">
-                                               <div>
-                                                   <select name="" id="" class="custom-select op-6">
-                                                       <option value="">Weekly</option>
-                                                       <option value="">Monthly</option>
-                                                       <option value="">Yearly</option>
-                                                   </select>
-                                               </div>
-                                               <div>
-                                                   <img src="asset/img/calender-img.png" alt=""> &nbsp;
-                                                   <input type="text" class="custom-select" style="width: 90px;" data-provide="datepicker" placeholder="Select dates">
-                                               </div>
+                              <div class="col-12 mb-4">
+                               <form action="">
+                                   <div class="row align-items-baseline">
+                                       <div class="col-12 mb-4">
+                                             <h6>Thumbnail</h6>
+                                           <div class="form-group course-dropify-ctn">
+                                               <input type="file" name="" class="dropify"  id="">
                                            </div>
                                        </div>
-                                       <canvas id="userChart"></canvas>
+                                       <div class="col-12 mb-4">
+                                           <div class="form-group">
+                                               <h6>Title</h6>
+                                               <input type="text" name="" placeholder="Title" id="" class="form-control custom">
+                                           </div>
+                                       </div>
                                    </div>
-
-                               </div>
-                               <div class="col-md-5 mb-3">
-                                   <div class="ckt-card curr-card">
-                                        <div class="d-flex flex-wrap align-items-center justify-content-between mb-5">
-                                            <div>
-                                                <h6>Overall Report</h6>
+                                   <div class="form-group mb-4">
+                                       <h6>Description</h6>
+                                       <textarea name="" class="form-control custom summernote"></textarea>
+                                   </div>
+                                   <div class="form-group mb-4">
+                                        <h6>Tags</h6>
+                                        <div class="tag-container">
+                                            <div class="tags">
+                                                <div class="tag">Computer skills &nbsp; <span class="delete-tag cursor-p"><i class="fa fa-times-circle"></i></span></div>
+                                                <div class="tag">Communication &nbsp; <span class="delete-tag cursor-p"><i class="fa fa-times-circle"></i></span></div>
                                             </div>
-                                            <div class="chart-filter">
-                                                <div>
-                                                    <select name="" id="" class="custom-select op-6">
-                                                        <option value="">Weekly</option>
-                                                        <option value="">Monthly</option>
-                                                        <option value="">Yearly</option>
-                                                    </select>
-                                                </div>
-                                                <div>
-                                                    <img src="asset/img/calender-img.png" alt=""> &nbsp;
-                                                    <input type="text" class="custom-select" style="width: 90px;" data-provide="datepicker" placeholder="Select dates">
-                                                </div>
-                                            </div>
+                                            <input type="text" class="input-tag" placeholder="Enter tag">
                                         </div>
-                                        <canvas id="overallChart"></canvas>
                                     </div>
-                               </div>
-                           </div>
-                          </div>
-                          <div class="col-lg-12 mb-4">
-                           <h5>Recent Users</h5>
-                           <div class="table-responsive">
-                                <table class="table" id="livelearn-table">
-                                     <thead>
-                                          <th>
-                                               <div class="d-flex align-items-center gap-2">
-                                                   <div
-                                                       class="form-check custom-checkbox checkbox-success check-lg">
-                                                       <input type="checkbox" class="form-check-input"
-                                                           id="customCheckBox8">
-                                                       <label class="form-check-label"
-                                                           for="customCheckBox8"></label>
-                                                   </div>
-                                                   <div class="apt_ful">
-                                                       <span> Name</span>
-                                                   </div>
-                                               </div>
-                                          </th>
-                                          <th>Sign Up Date</th>
-                                          <th>Subscription Plan </th>
-                                          <th>Type</th>
-                                          <th></th>
-                                     </thead>
-                                    <tbody>
-                                     <tr>
-                                          <td>
-                                               <div class="d-flex align-items-center gap-2">
-                                                   <div
-                                                       class="form-check custom-checkbox checkbox-success check-lg">
-                                                       <input type="checkbox" class="form-check-input"
-                                                           id="customCheckBox8">
-                                                       <label class="form-check-label"
-                                                           for="customCheckBox8"></label>
-                                                   </div>
-                                                   <div class="apt_ful">
-                                                       <span> John Doe</span>
-                                                   </div>
-                                               </div>
-
-                                          </td>
-                                          <td>March 23, 2024 12:00PM </td>
-                                          <td>Premium</td>
-                                          <td><span class="live-badge primary">Student</span></td>
-                                          <td><i class="fa fa-ellipsis-h"></i></td>
-                                     </tr>
-                                     <tr>
-                                          <td>
-                                               <div class="d-flex align-items-center gap-2">
-                                                   <div
-                                                       class="form-check custom-checkbox checkbox-success check-lg">
-                                                       <input type="checkbox" class="form-check-input"
-                                                           id="customCheckBox8">
-                                                       <label class="form-check-label"
-                                                           for="customCheckBox8"></label>
-                                                   </div>
-                                                   <div class="apt_ful">
-                                                       <span> John Doe</span>
-                                                   </div>
-                                               </div>
-
-                                          </td>
-                                          <td>March 23, 2024 12:00PM </td>
-                                          <td>Free</td>
-                                          <td><span class="live-badge warning">Proguide</span></td>
-                                          <td><i class="fa fa-ellipsis-h"></i></td>
-                                     </tr>
-                                     <tr>
-                                          <td>
-                                               <div class="d-flex align-items-center gap-2">
-                                                   <div
-                                                       class="form-check custom-checkbox checkbox-success check-lg">
-                                                       <input type="checkbox" class="form-check-input"
-                                                           id="customCheckBox8">
-                                                       <label class="form-check-label"
-                                                           for="customCheckBox8"></label>
-                                                   </div>
-                                                   <div class="apt_ful">
-                                                       <span> John Doe</span>
-                                                   </div>
-                                               </div>
-
-                                          </td>
-                                          <td>March 23, 2024 12:00PM </td>
-                                          <td>Premium Plus</td>
-                                          <td><span class="live-badge secondary">Employer</span></td>
-                                          <td><i class="fa fa-ellipsis-h"></i></td>
-                                     </tr>
-                                    </tbody>
-                                </table>
-                           </div>
-                           </div>
+                                   <div class="d-flex align-items-center justify-content-between mt-5 mb-5">
+                                       <a href="blog.html" class="new-discussion-btn btn-danger">Discard</a>
+                                       <button type="button" data-bs-toggle="modal" 
+                                       data-bs-target="#successModal" class="new-discussion-btn" id="publishCourseBtn"> Publish</button>
+                                   </div>
+                               </form>
+                              </div>
                          </div>
                    </div>
                     </div>
@@ -401,9 +271,9 @@
                     </div>
                        <h3 class="text-center mb-2">Success!</h3>
                       <div class="text-center mb-2">
-                        You have successfully registered for a LiveLearn Session.
+                        Blog post successfully published.
                       </div>
-                        <button type="button" class="new-discussion-btn w-100 mb-2">Go Back</button>
+                        <button type="button" data-bs-dismiss="modal" class="new-discussion-btn w-100 mb-2">Go Back</button>
                   </div>
              </div>
         </div>
@@ -423,16 +293,37 @@
     <script src="vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
     <script src="vendor/bootstrap-datepicker/bootstrap-datepicker.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="vendor/fileuploads/js/fileupload.js"></script>
+    <script src="vendor/fileuploads/js/file-upload.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote.min.js" integrity="sha512-6rE6Bx6fCBpRXG/FWpQmvguMWDLWMQjPycXMr35Zx/HRD9nwySZswkkLksgyQcvrpYMx0FELLJVBvWFtubZhDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="vendor/summernote/summernote.js"></script> -->
     <script src="asset/js/dashboard.js"></script>
     <script src="asset/js/plugins_init.js"></script>
     <script src="asset/js/main.js"></script>
     <script>
-        $(document).ready(function(){
-            $('#livelearn-table_filter').addClass('d-none');
-            $('#livelearn-table_paginate').addClass('d-none');
-            $('#livelearn-table_info').addClass('d-none');
-        });
-    </script>
-</body>
+     $(document).ready(function(){
 
+         $('.input-tag').on('keypress', function(event) {
+             var _this = $(this);
+
+             if (event.which === 13 || event.which === 44 || _this.val().indexOf(',') !== -1) { 
+                 event.preventDefault();
+                 var inputValue = $(this).val().trim();
+                  inputValue = inputValue.replace(/,/g, '');
+                 if (inputValue !== '') {
+                     var html = `
+                         <div class="tag">${inputValue} &nbsp; <span class="delete-tag cursor-p"><i class="fa fa-times-circle"></i></span></div>
+                     `;
+                     _this.siblings('.tags').append(html);
+                 }
+                 _this.val('');
+             }
+         });
+
+         $('.delete-tag').on('click', function(){
+             $(this).parent('.tag').remove();
+         })
+     })
+ </script>
+</body>
 </html>

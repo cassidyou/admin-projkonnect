@@ -241,18 +241,14 @@
 }
 
 
-#jobInternChart,
-#studentChart,
-#userChart,
-#overallChart{
-     max-height: 300px!important;
-    
+#jobInternChart{
+     max-height: 320px!important;
  }
 
 
  @media (max-width: 375px){
-     #overallChart{
-          min-height: 200px!important;
+     #jobInternChart{
+          min-width: 300px!important;
      }
  }
 
@@ -307,39 +303,14 @@
      width: auto;
  }
 
+ .question-ctn{
+     display: flex;
+     align-items: center;
+     justify-content: start;
+     gap: 10px;
+ }
 
-
- .tag-container{
-     padding: 15px;
-     display: inline-block;
-     border: 1px solid #ccc;
-     background-color: #ccc;
-     width: 100%;
-}
-
-.tag-container .tags{
-     display: inline;
-}
-
-.tag-container .tag{
-     padding: 5px 8px;
-     border-radius: 5px;
-     background-color: var(--white-color);
-     display: inline-block;
-     font-size: 14px;
-     margin-bottom: 10px;
-}
-
-.tag-container .input-tag,
-.tag-container .input-tag:focus{
-     border: none;
-     margin-left: 10px;
-     font-size: 14px;
-     min-width: 200px;
-     background-color: transparent;
-}
-
-tr.th_tpc th:first-child {
+ tr.th_tpc th:first-child {
      border-top-left-radius: 10px;
  }
  
@@ -455,99 +426,3 @@ tr.th_tpc th:first-child {
      padding-right: 20px;
      border-color: transparent;
  }
-
- .modal-header button.close{
-     border: none;
-     background: transparent;
-     outline: none;
-     font-size: 20px;
- }
-
- .form-control-file.note-form-control{
-     display: block;
-     margin-top: 10px;
-     margin-bottom: 30px;
- }
-
- .modal-title{
-     font-size: 20px;
- }
-
- .panel-heading.note-toolbar{
-     background: transparent;
-     border-bottom: 1px solid #ccc;
-     padding: 10px;
- }
-
- .thumbnail-img{
-     height: 120px;
-     width: auto;
- }
-
-
- .add-faq-btn.new-discussion-btn{
-     background: var(--white-color);
-     border: 1px solid var(--primary-color);
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     height: 30px;
-     width: 30px;
-     min-width: 30px;
-     color: var(--primary-color);
- }
-
- .question-container{
-     display: flex;
-     align-items: start;
-     justify-content: space-between;
-     gap: 10px;
-     border-bottom: 2px solid #ccc;
-     padding-bottom: 20px;
-     padding-top: 20px;
- }
-
- .question-container:last-child{
-     border-bottom: none;
-     padding-bottom: 0;
- }
-
- .question-container:first-child{
-     padding-top: 0;
- }
-
- .question-container .qua-ctn{
-     max-width: 80%;
-     cursor: pointer;
- }
-
- .question-container .faq-answer{
-     opacity: .7;
-     transition: linear 2s ease;
- }
-
- .faq-answer.closed{
-     height: 0;
- }
-
- .hr-dotted-line{
-     border-bottom: 2px dashed #ccc;
-     margin: 30px 0;
- }
-
- .custom-select-auto,
- .custom-select-auto:focus,
- .custom-select-auto:focus-within,
- .custom-select-auto:active,
- .custom-select-auto:focus-visible{
-     width: 100%;
-     background: transparent;
-     min-height: 40px;
-     box-shadow: none!important;
-     border: 1px solid #ccc!important;
-     outline: none!important;
-     padding-left: 10px;
-     padding-right: 10px;
- }
-
-
