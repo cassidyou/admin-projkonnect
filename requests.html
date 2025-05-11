@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Requests </title>
+
+    <!--asset-->
+    <link rel="shortcut icon" type="text/css" href="asset/img/favicon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://preview.colorlib.com/theme/bootstrap/css-table-19/css/style.css">
+
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="vendor/fontawesome/all.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="vendor/datatables/css/jquery.dataTables.min.css">
+
+    <!-- Bootstrap daterangepicker -->
+    <link rel="stylesheet" href="vendor/bootstrap-daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.css"
+        integrity="sha512-In/+MILhf6UMDJU4ZhDL0R0fEpsp4D3Le23m6+ujDWXwl3whwpucJG1PEmI3B07nyJx+875ccs+yX2CqQJUxUw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+
+    <!--Custom CSS-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="stylesheet" href="asset/css/admin.css">
+    <link rel="stylesheet" href="asset/css/responsive.css">
+
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2 sidebar">
+                    <div class="sidebar-header">
+                        <div class="sidebar-close d-lg-none"></div>
+                        <div class="logo">
+                            <img src="asset/img/logo-light.png" class="img-fluid mb-2 sidebar-logo" alt="">
+                        </div>
+                    </div>
+                    <div class="sidebar-content">
+                        <ul class="sidebar-nav-links">
+                            <li class="adm-sidebar-link-item">
+                                <a href="index.html" class="sidebar-link">
+                                    <img src="asset/img/dashboard-img.png" alt="">
+                                    Dashboard
+                                </a>
+                            </li>
+                            <li class="adm-sidebar-link-item">
+                                <a href="authors.html" class="sidebar-link">
+                                    <img src="asset/img/users-icon.png" alt="">
+                                    Authors
+                                </a>
+                            </li>
+                            <li class="adm-sidebar-link-item">
+                                <a href="blog.html" class="sidebar-link">
+                                    <img src="asset/img/users-icon.png" alt="">
+                                    Blog
+                                </a>
+                            </li>
+                            <li class="adm-sidebar-link-item">
+                                <a href="user-management.html" class="sidebar-link">
+                                    <img src="asset/img/users-icon.png" alt="">
+                                    User Management
+                                </a>
+                            </li>
+                            <li class="adm-sidebar-link-item">
+                                <a href="subscription-plans.html" class="sidebar-link">
+                                    <img src="asset/img/dollar-sub-icon.png" alt="">
+                                    Subscription Plans
+                                </a>
+                            </li>
+                            <li class="adm-sidebar-link-item">
+                                <a href="course-management.html" class="sidebar-link">
+                                    <img src="asset/img/book_icon.png" alt="">
+                                    Course Management
+                                </a>
+                            </li>
+                            <li class="adm-sidebar-link-item">
+                                <a href="content-management.html" class="sidebar-link">
+                                    <img src="asset/img/paper-pen-icon.png" alt="">
+                                    Content Management
+                                </a>
+                            </li>
+                           <li class="adm-sidebar-link-item">
+                                <a href="curriculum-management.html" class="sidebar-link">
+                                    <img src="asset/img/dashboard-img.png" alt="">
+                                    Curiculum Management
+                                </a>
+                            </li>
+                            <li class="adm-sidebar-link-item">
+                                <a href="faculty-management.html" class="sidebar-link">
+                                    <img src="asset/img/dashboard-img.png" alt="">
+                                    Faculty Management
+                                </a>
+                            </li>
+                            <li class="adm-sidebar-link-item">
+                                <a href="verifications.html" class="sidebar-link">
+                                    <img src="asset/img/user-img.png" alt="">
+                                    Verifications
+                                </a>
+                            </li>
+                            <li class="adm-sidebar-link-item">
+                                <a href="withdrawal-request.html" class="sidebar-link">
+                                    <img src="asset/img/dollar-sub-icon.png" alt="">
+                                    Withdrawal Requests
+                                </a>
+                            </li>
+                            <li class="adm-sidebar-link-item">
+                                <a href="contact-us.html" class="sidebar-link">
+                                    <i class="fa fa-phone-alt" style="margin-right: 5px;"></i>
+                                    Contanct Us
+                                </a>
+                            </li>
+                            <li class="adm-sidebar-link-item">
+                                <a href="reports.html" class="sidebar-link">
+                                    <img src="asset/img/report-icon.png" style="width: 15px!important;" alt="">
+                                    Reports
+                                </a>
+                            </li>
+                            <li class="adm-sidebar-link-item">
+                                <a href="settings.html" class="sidebar-link">
+                                    <i class="fa fa-cog" style="margin-right: 5px;"></i>
+                                    Settings
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="sidebar-footer">
+                            <a href="profile.html" class="sidebar-link mb-5">
+                                <img src="asset/img/setting-icon-light.png" alt="">
+                                My Account
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-10 main">
+                    <div class="container-fluid px-4">
+                        <div class="main-header">
+                            <div class="d-flex align-items-start gap-3">
+                                <div class="menu harmburger-menu d-lg-none">
+                                    <div class="menu"></div>
+                                </div>
+                                <h1 class="heading">Course Requests</h1>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+
+                                <div class="profile-dropdown notify-dropdown">
+                                    <div class="drop-now">
+                                        <img src="asset/img/notification-icon.png" alt="">
+                                    </div>
+                                    <div class="profile-dropdown-items notify-dropdown-items d-none">
+                                        <div class="d-flex align-items-center justify-content-between mb-4">
+                                            <h4 class="heading">Notifications</h4>
+                                            <span> <i class="fa fa-check-double"></i> Mark all as read</span>
+                                        </div>
+                                        <div class="notify-dropdown-item">
+                                            <div class="notice-ctn">
+                                                <div class="img">
+                                                    <img src="asset/img/user-picture.png" alt="">
+                                                </div>
+                                                <div class="notice">
+                                                    <p>
+                                                        <b>John Does</b> added a new course, check this out!
+                                                    </p>
+                                                    <small class="time">23 mins ago</small>
+                                                </div>
+                                                <div class="resta"></div>
+                                            </div>
+                                            <div class="notice-ctn">
+                                                <div class="img">
+                                                    <img src="asset/img/user-picture.png" alt="">
+                                                </div>
+                                                <div class="notice">
+                                                    <p>
+                                                        <b>John Does</b> added a new course, check this out!
+                                                    </p>
+                                                    <small class="time">23 mins ago</small>
+                                                </div>
+                                                <!-- <div class="resta"></div> -->
+                                            </div>
+                                            <div class="text-center">
+                                                <a href="notifications.html" class="notify-btn">See all
+                                                    notifications</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="profile-dropdown">
+                                    <div class="drop-now d-flex align-items-center justify-content-between gap-4">
+                                        <div class="d-flex align-items-center align-items-start gap-3">
+                                            <div class="img">
+                                                <img src="asset/img/user-picture.png" class="img-flui" alt="">
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <span class="name">Williams</span>
+                                                <span class="role">Admin</span>
+                                            </div>
+                                        </div>
+                                        <div class="directions close">
+                                            <i class="fa fa-chevron-down"></i>
+                                            <i class="fa fa-chevron-up"></i>
+                                        </div>
+                                    </div>
+                                    <ul class="profile-dropdown-items profile-items d-none">
+                                        <li class="dropdown-item">
+                                            <a href="profile.html">
+                                                <img src="asset/img/user-icon-dark.png" class="img-fluid"
+                                                    alt="icon">Profile</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="https://cassidyou.github.io/projkonnect/">
+                                                <img src="asset/img/globe-icon.svg" class="img-fluid"
+                                                    alt="icon">Homepage</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="projkonnect-ai.html">
+                                                <img src="asset/img/projkonnectai_icon.png" class="img-fluid"
+                                                    alt="icon">MindBridge AI</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="../login.html">
+                                                <img src="asset/img/login-icon.png" class="img-fluid"
+                                                    alt="icon">Logout</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-content">
+                            <div class="custom-card">
+                                <div class="row">
+                                   <div class="col-12">
+                                       <div class="smart-d-container">
+                                        <div class="res-skill-ctn">
+                                            <div class="custom-tab request">
+                                                <div class="d-flex align-items-center justify-content-between flexwrapper">
+                                                    <ul class="nav nav-tabs order-2 order-sm-1">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link active" data-bs-toggle="tab" href="#pending"></i> Pending <span class="counter">2</span> </a>
+                                                        </li> 
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" data-bs-toggle="tab" href="#completed"> Completed <span class="counter">2</span> </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                   
+                                                <div class="tab-content mt-3">
+                                                    <div class="tab-pane fade show active" id="pending" role="tabpanel">
+                                                        <div class="res-skill-filter-ctn">
+                                                            <div class="search-ctn">
+                                                                <img src="asset/img/message-search-icon.png" alt="">
+                                                                <input type="text" name="seach" id="" placeholder="Search requests">
+                                                            </div>
+                                                            <div>
+                                                                <select name="" id="">
+                                                                    <option value="">All Categories</option>
+                                                                </select>
+                                                            </div>
+                                                            <div>
+                                                                <select name="" id="">
+                                                                    <option value="">Sort by Date</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="request-card">
+                                                                <div class="d-flex align-items-center justify-content-start gap-3">
+                                                                    <div class="img-ctn">
+                                                                        <img src="asset/img/team3.png" alt="">
+                                                                    </div>
+                                                                    <div>
+                                                                        <h5>Sarah Johnson</h5>
+                                                                        <div class="my-2">
+                                                                            <small class="live-badge primary">Course Access</small> &nbsp; <small class="op-6">Submitted 2 hours ago</small>
+                                                                        </div>
+                                                                        <div class="op-6 txt">Request access to Advanced Mathematics Course</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex align-items-center justify-content-end gap-3">
+                                                                    <small class="live-badge danger">High Priority</small>
+                                                                    <a href="request-details.html" class="btn btn-dark">View Details</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="request-card">
+                                                                <div class="d-flex align-items-center justify-content-start gap-3">
+                                                                    <div class="img-ctn">
+                                                                        <img src="asset/img/team3.png" alt="">
+                                                                    </div>
+                                                                    <div>
+                                                                        <h5>Sarah Johnson</h5>
+                                                                        <div class="my-2">
+                                                                            <small class="live-badge purple">Assignment Extension</small> &nbsp; <small class="op-6">Submitted 2 hours ago</small>
+                                                                        </div>
+                                                                        <div class="op-6 txt">Request access to Advanced Mathematics Course</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex align-items-center justify-content-end gap-3">
+                                                                    <a href="request-details.html" class="btn btn-dark">View Details</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="request-card">
+                                                                <div class="d-flex align-items-center justify-content-start gap-3">
+                                                                    <div class="img-ctn">
+                                                                        <img src="asset/img/team3.png" alt="">
+                                                                    </div>
+                                                                    <div>
+                                                                        <h5>Sarah Johnson</h5>
+                                                                        <div class="my-2">
+                                                                            <small class="live-badge warning">Technical Support</small> &nbsp; <small class="op-6">Submitted 2 hours ago</small>
+                                                                        </div>
+                                                                        <div class="op-6 txt">Request access to Advanced Mathematics Course</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex align-items-center justify-content-end gap-3">
+                                                                    <a href="request-details.html" class="btn btn-dark">View Details</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="request-card">
+                                                                <div class="d-flex align-items-center justify-content-start gap-3">
+                                                                    <div class="img-ctn">
+                                                                        <img src="asset/img/team3.png" alt="">
+                                                                    </div>
+                                                                    <div>
+                                                                        <h5>Sarah Johnson</h5>
+                                                                        <div class="my-2">
+                                                                            <small class="live-badge success">Course Access</small> &nbsp; <small class="op-6">Submitted 2 hours ago</small>
+                                                                        </div>
+                                                                        <div class="op-6 txt">Request access to Advanced Mathematics Course</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex align-items-center justify-content-end gap-3">
+                                                                    <a href="request-details.html" class="btn btn-dark">View Details</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane fade show" id="completed" role="tabpanel">
+                                                         <div class="res-skill-filter-ctn">
+                                                            <div class="search-ctn">
+                                                                <img src="asset/img/message-search-icon.png" alt="">
+                                                                <input type="text" name="seach" id="" placeholder="Search requests">
+                                                            </div>
+                                                            <div>
+                                                                <select name="" id="">
+                                                                    <option value="">All Categories</option>
+                                                                </select>
+                                                            </div>
+                                                            <div>
+                                                                <select name="" id="">
+                                                                    <option value="">Sort by Date</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="request-card">
+                                                                <div class="d-flex align-items-center justify-content-start gap-3">
+                                                                    <div class="img-ctn">
+                                                                        <img src="asset/img/team3.png" alt="">
+                                                                    </div>
+                                                                    <div>
+                                                                        <h5>Sarah Johnson</h5>
+                                                                        <div class="my-2">
+                                                                            <small class="live-badge primary">Course Access</small> &nbsp; <small class="op-6">Submitted 2 hours ago</small>
+                                                                        </div>
+                                                                        <div class="op-6 txt">Request access to Advanced Mathematics Course</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex align-items-center justify-content-end gap-3">
+                                                                    <small class="live-badge danger">High Priority</small>
+                                                                    <a href="request-details.html" class="btn btn-dark">View Details</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="request-card">
+                                                                <div class="d-flex align-items-center justify-content-start gap-3">
+                                                                    <div class="img-ctn">
+                                                                        <img src="asset/img/team3.png" alt="">
+                                                                    </div>
+                                                                    <div>
+                                                                        <h5>Sarah Johnson</h5>
+                                                                        <div class="my-2">
+                                                                            <small class="live-badge purple">Assignment Extension</small> &nbsp; <small class="op-6">Submitted 2 hours ago</small>
+                                                                        </div>
+                                                                        <div class="op-6 txt">Request access to Advanced Mathematics Course</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex align-items-center justify-content-end gap-3">
+                                                                    <a href="request-details.html" class="btn btn-dark">View Details</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="request-card">
+                                                                <div class="d-flex align-items-center justify-content-start gap-3">
+                                                                    <div class="img-ctn">
+                                                                        <img src="asset/img/team3.png" alt="">
+                                                                    </div>
+                                                                    <div>
+                                                                        <h5>Sarah Johnson</h5>
+                                                                        <div class="my-2">
+                                                                            <small class="live-badge warning">Technical Support</small> &nbsp; <small class="op-6">Submitted 2 hours ago</small>
+                                                                        </div>
+                                                                        <div class="op-6 txt">Request access to Advanced Mathematics Course</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex align-items-center justify-content-end gap-3">
+                                                                    <a href="request-details.html" class="btn btn-dark">View Details</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="request-card">
+                                                                <div class="d-flex align-items-center justify-content-start gap-3">
+                                                                    <div class="img-ctn">
+                                                                        <img src="asset/img/team3.png" alt="">
+                                                                    </div>
+                                                                    <div>
+                                                                        <h5>Sarah Johnson</h5>
+                                                                        <div class="my-2">
+                                                                            <small class="live-badge success">Course Access</small> &nbsp; <small class="op-6">Submitted 2 hours ago</small>
+                                                                        </div>
+                                                                        <div class="op-6 txt">Request access to Advanced Mathematics Course</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex align-items-center justify-content-end gap-3">
+                                                                    <a href="request-details.html" class="btn btn-dark">View Details</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                   </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body rounded">
+                    <div class="d-flex align-items-center justify-content-center mb-2 mt-3">
+                        <img src="asset/img/success-star-checked.png" width="50px" alt="icon">
+                    </div>
+                    <h3 class="text-center mb-2">Success!</h3>
+                    <div class="text-center mb-2">
+                        You have successfully deactivated <h6 class="d-inline">Williams Michael</h6>
+                    </div>
+                    <button type="button" class="new-discussion-btn w-100 mb-2" data-bs-dismiss="modal">Go Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="internModal" tabindex="-1" aria-labelledby="internModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body rounded">
+                    <div class="d-flex align-items-center justify-content-center mb-2 mt-3">
+                        <div class="student-img">
+                            <img src="asset/img/team3.png" alt="icon">
+                        </div>
+                    </div>
+                    <h6 class="text-center mb-2">Mary Williams</h6>
+                    <h5 class="text-center mb-5">Author</h5>
+                    <div class="d-flex align-items-center justify-content-between gap-4">
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#successModal"
+                            class="new-discussion-btn w-100 outline-danger text-center d-block mb-2">Deactivate</button>
+                        <a href="javascript:;" type="button" class="new-discussion-btn text-center w-100 mb-2">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- JS FILES -->
+    <script src="vendor/jquery/jQuery3.6.1.min.js"></script>
+    <script src="vendor/popper/popper.js"></script>
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="vendor/fontawesome/all.min.js"></script>
+    <script src="vendor/jquery-validate/jquery.validate.js"></script>
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="vendor/moment/moment.min.js"></script>
+    <script src="vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="vendor/fileuploads/js/fileupload.js"></script>
+    <script src="vendor/fileuploads/js/file-upload.js"></script>
+    <!-- <script src="asset/js/dashboard.js"></script> -->
+    <script src="asset/js/plugins_init.js"></script>
+    <script src="asset/js/main.js"></script>
+</body>
+
+</html>

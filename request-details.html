@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin - Profile</title>
+    <title>Admin - Request Details </title>
 
     <!--asset-->
     <link rel="shortcut icon" type="text/css" href="asset/img/favicon.png">
@@ -17,9 +18,13 @@
 
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
-
+    <link rel="stylesheet" href="vendor/datatables/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs5.min.css" integrity="sha512-ngQ4IGzHQ3s/Hh8kMyG4FC74wzitukRMIcTOoKT3EyzFZCILOPF0twiXOQn75eDINUfKBYmzYn2AA8DkAk8veQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Bootstrap daterangepicker -->
     <link rel="stylesheet" href="vendor/bootstrap-daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.css"
+        integrity="sha512-In/+MILhf6UMDJU4ZhDL0R0fEpsp4D3Le23m6+ujDWXwl3whwpucJG1PEmI3B07nyJx+875ccs+yX2CqQJUxUw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
     <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
 
@@ -60,7 +65,7 @@
                             <li class="adm-sidebar-link-item">
                                 <a href="blog.html" class="sidebar-link">
                                     <img src="asset/img/users-icon.png" alt="">
-                                   Blog
+                                    Blog
                                 </a>
                             </li>
                             <li class="adm-sidebar-link-item">
@@ -87,7 +92,7 @@
                                     Content Management
                                 </a>
                             </li>
-                            <li class="adm-sidebar-link-item">
+                           <li class="adm-sidebar-link-item">
                                 <a href="curriculum-management.html" class="sidebar-link">
                                     <img src="asset/img/dashboard-img.png" alt="">
                                     Curiculum Management
@@ -131,7 +136,7 @@
                             </li>
                         </ul>
                         <div class="sidebar-footer">
-                            <a href="profile.html" class="sidebar-link active mb-5">
+                            <a href="profile.html" class="sidebar-link mb-5">
                                 <img src="asset/img/setting-icon-light.png" alt="">
                                 My Account
                             </a>
@@ -144,11 +149,11 @@
                             <div class="d-flex align-items-start gap-3">
                                 <div class="menu harmburger-menu d-lg-none">
                                     <div class="menu"></div>
-                                 </div>
-                                <h1 class="heading">My Account</h1>
+                                </div>
+                                <h1 class="heading">Course Requests</h1>
                             </div>
                             <div class="d-flex align-items-center justify-content-between">
-    
+
                                 <div class="profile-dropdown notify-dropdown">
                                     <div class="drop-now">
                                         <img src="asset/img/notification-icon.png" alt="">
@@ -156,7 +161,7 @@
                                     <div class="profile-dropdown-items notify-dropdown-items d-none">
                                         <div class="d-flex align-items-center justify-content-between mb-4">
                                             <h4 class="heading">Notifications</h4>
-                                            <span>  <i class="fa fa-check-double"></i> Mark all as read</span>
+                                            <span> <i class="fa fa-check-double"></i> Mark all as read</span>
                                         </div>
                                         <div class="notify-dropdown-item">
                                             <div class="notice-ctn">
@@ -184,12 +189,13 @@
                                                 <!-- <div class="resta"></div> -->
                                             </div>
                                             <div class="text-center">
-                                                <a href="notifications.html" class="notify-btn">See all notifications</a>
+                                                <a href="notifications.html" class="notify-btn">See all
+                                                    notifications</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-    
+
                                 <div class="profile-dropdown">
                                     <div class="drop-now d-flex align-items-center justify-content-between gap-4">
                                         <div class="d-flex align-items-center align-items-start gap-3">
@@ -209,148 +215,132 @@
                                     <ul class="profile-dropdown-items profile-items d-none">
                                         <li class="dropdown-item">
                                             <a href="profile.html">
-                                            <img src="asset/img/user-icon-dark.png" class="img-fluid" alt="icon">Profile</a>
+                                                <img src="asset/img/user-icon-dark.png" class="img-fluid"
+                                                    alt="icon">Profile</a>
                                         </li>
                                         <li class="dropdown-item">
                                             <a href="https://cassidyou.github.io/projkonnect/">
-                                            <img src="asset/img/globe-icon.svg" class="img-fluid" alt="icon">Homepage</a>
+                                                <img src="asset/img/globe-icon.svg" class="img-fluid"
+                                                    alt="icon">Homepage</a>
                                         </li>
                                         <li class="dropdown-item">
                                             <a href="projkonnect-ai.html">
-                                            <img src="asset/img/projkonnectai_icon.png" class="img-fluid" alt="icon">MindBridge AI</a>
+                                                <img src="asset/img/projkonnectai_icon.png" class="img-fluid"
+                                                    alt="icon">MindBridge AI</a>
                                         </li>
                                         <li class="dropdown-item">
                                             <a href="../login.html">
-                                            <img src="asset/img/login-icon.png" class="img-fluid" alt="icon">Logout</a></li>
+                                                <img src="asset/img/login-icon.png" class="img-fluid"
+                                                    alt="icon">Logout</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="main-content">
-                            <div class="row">
-                                 <div class="col-lg-11 col-12">
-                                     <div class="row align-items-start">
-                                         <div class="col-md-5 mt-5">
-                                             <div class="profile-ctn">
-                                                 <div class="img" id="imagePreview">
-                                                     <img src="asset/img/user-picture.png" alt="">
-                                                 </div>
-                                                 <div>
-                                                     <input type="file" class="d-none" name="profile_picture" id="profile_picture">
-                                                     <label class="file-label" for="profile_picture">Change Picture</label>
-                                                 </div>
-                                             </div>
-                                         </div>
-                                         <div class="col-md-7 mt-5">
-                                             <div class="profile-details">
-                                                 <h3>Profile Details</h3>
-                                                 <form action="">
-                                                     <div class="row">
-                                                         <div class="col-sm-6 mb-4">
-                                                             <div class="form-group">
-                                                                 <label for="first_name">First Name</label>
-                                                                 <input type="text" id="first_name" name="" value="Michael" class="form-control">
-                                                             </div>
-                                                         </div>
-                                                         <div class="col-sm-6 mb-4">
-                                                             <div class="form-group">
-                                                                 <label for="last_name">Last Name</label>
-                                                                 <input type="text" id="last_name" name="" value="Ogbonna" class="form-control">
-                                                             </div>
-                                                         </div>
-                                                         <div class="col-sm-6 mb-4">
-                                                             <div class="form-group">
-                                                                 <label for="email">Email</label>
-                                                                 <input type="text" id="email" name="" value="myemail@gmail.com" class="form-control">
-                                                             </div>
-                                                         </div>
-                                                         <div class="col-sm-6 mb-4">
-                                                             <div class="form-group">
-                                                                 <label for="phone_number">Phone Number</label>
-                                                                 <input type="text" id="phone_number" name="" value="+23489376453" class="form-control">
-                                                             </div>
-                                                         </div>
-                                                         <div class="col-sm-6 mb-4">
-                                                             <div class="form-group">
-                                                                 <label for="gender">Gender</label>
-                                                                 <select name="gender" id="gener" class="form-control">
-                                                                    <option value="">Select</option>
-                                                                    <option value="m">Male</option>
-                                                                    <option value="f">Female</option>
-                                                                 </select>
-                                                                 
-                                                             </div>
-                                                         </div>
-                                                         <div class="col-sm-6 mb-4">
-                                                             <div class="form-group">
-                                                                 <label for="country">Country</label>
-                                                                 <select name="country" id="country" class="form-control">
-                                                                    <option value="">Select</option>
-                                                                    <option value="Nigeria">Nigeria</option>
-                                                                    <option value="USA">USA</option>
-                                                                 </select>
-                                                                 
-                                                             </div>
-                                                         </div>
-                                                         <div class="col-sm-6 mb-4">
-                                                             <div class="form-group">
-                                                                 <label for="qualification">Qualification</label>
-                                                                 <select name="qualification" id="qualification" class="form-control">
-                                                                    <option value="">Select</option>
-                                                                    <option value="ond">OND</option>
-                                                                    <option value="hnd">HND</option>
-                                                                    <option value="bsc">BSc</option>
-                                                                    <option value="msc">MSc</option>
-                                                                    <option value="phD">phD</option>
-                                                                 </select>
-                                                                 
-                                                             </div>
-                                                         </div>
-                                                         <div class="col-sm-6 mb-4">
-                                                             <div class="form-group">
-                                                                 <label for="university">University</label>
-                                                                <input type="text" name="university" id="university" class="form-control">
-                                                             </div>
-                                                         </div>
-                                                        
-                                                     </div>
-                                                     <div class="row" style="border-bottom: 2px dashed rgba(0,0,0,0.1);">
-                                                         <div class="col-sm-6 mb-4">
-                                                             <div class="form-group">
-                                                                 <label for="">Password</label>
-                                                                 <div class="input-group i-group-div">
-                                                                     <input type="password" value="74877euu377e6" name="password" class="form-control shadow-none psw_input">
-                                                                     <div class="input-group-text rlf-hd">
-                                                                       <span class="d-none rlf-hd-show"><i class="fa fa-eye"></i></span>
-                                                                       <span class="rlf-hd-hide"><i class="fa fa-eye-slash"></i></span>
-                                                                     </div>
-                                                                 </div>
-                                                             </div>
-                                                         </div>
-                                                         <div class="col-sm-6 mb-4">
-                                                             <div class="form-group">
-                                                                 <label for="">Confirm Password</label>
-                                                                 <div class="input-group i-group-div">
-                                                                     <input type="password" value="74877euu377e6" name="password" class="form-control shadow-none psw_input">
-                                                                     <div class="input-group-text rlf-hd">
-                                                                       <span class="d-none rlf-hd-show"><i class="fa fa-eye"></i></span>
-                                                                       <span class="rlf-hd-hide"><i class="fa fa-eye-slash"></i></span>
-                                                                     </div>
-                                                                 </div>
-                                                             </div>
-                                                         </div>
-                                                     </div>
-                                                     <div class="text-end mt-3">
-                                                         <button class="submit-btn">Update Profile</button>
-                                                     </div>
-                                                 </form>
-                                             </div>
-                                         </div>
-                                     </div>
-                                 </div>
-                                 <div class="col-lg-1"></div>
-                             </div>
- 
+                            <div class="request-details">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="d-flex align-items-center justify-content-start gap-3 flex-wrap">
+                                            <h5>Request #SR-2024-0123</h5>
+                                            <span class="live-badge warning">In progress</span>
+                                        </div>
+                                        <small class="op-6">Submitted: March 15, 2024 at 2:30 PM </small>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="requester gray-bg">
+                                                    <div class="d-flex align-items-center justify-content-start gap-3">
+                                                        <div class="img-ctn">
+                                                            <img src="asset/img/team3.png" alt="">
+                                                        </div>
+                                                        <div>
+                                                            <h6>Sarah Johnson</h6>
+                                                            <small class="op-6">ID: 2024015789</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex align-items-center justify-content-between op-6 mt-3">
+                                                        <small>Major:</small>
+                                                        <small>Computer Science</small>
+                                                    </div>
+                                                    <div class="d-flex align-items-center justify-content-between op-6 mt-3">
+                                                        <small>Year:</small>
+                                                        <small>Junior</small>
+                                                    </div>
+                                                    <div class="d-flex align-items-center justify-content-between op-6 mt-3">
+                                                        <small>Credits:</small>
+                                                        <small>90</small>
+                                                    </div>
+                                                </div>
+                                                <div class="request-timeline gray-bg mb-4">
+                                                    <h5 class="mb-4">Request Timeline</h5>
+                                                    <div class="d-flex align-items-center justify-content-start gap-2">
+                                                        <div class="dot black"></div>
+                                                        <div>
+                                                            <h6>Request Submitted</h6>
+                                                            <small class="op-6">Mar 16, 2024 2:30 PM</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex align-items-center justify-content-start gap-2 mt-4">
+                                                        <div class="dot yellow"></div>
+                                                        <div>
+                                                            <h6>Assigned to Advisor</h6>
+                                                            <small class="op-6">Mar 16, 2024 2:30 PM</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex align-items-center justify-content-start gap-2 mt-4">
+                                                        <div class="dot gray"></div>
+                                                        <div>
+                                                            <h6>Under Review</h6>
+                                                            <small class="op-6">Mar 15, 2024 2:30 PM</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="details gray-bg">
+                                                    <h4>Request Details</h4>
+                                                    <h5>Category</h5>
+                                                    <h6>Academic Advising</h6>
+
+                                                    <h5>Subject</h5>
+                                                    <h6>Course Registration Assistance</h6>
+
+                                                    <h5>Description</h5>
+                                                    <div>
+                                                        I need help with registering for next semester's advanced algorithms course. The system shows it's 
+                                                        full, but it's a required course for my major and I need to take it to graduate on time. Is there any 
+                                                        possibility of getting an override or being added to a waitlist?
+                                                    </div>
+                                                </div>
+                                                <div class="response">
+                                                    <h4>Compose Response</h4>
+                                                    <textarea name="" id="" class="summernote"></textarea>
+
+                                                    <div class="mt-4">
+                                                        <label for="attachment" class="cursor-p">
+                                                            <img src="asset/img/attachment.png" alt=""> Attach files
+                                                            <input type="file" class="d-none" id="attachment">
+
+                                                        </label>
+                                                        <label for="email-notification">
+                                                            <input type="checkbox" name="email-notification ">
+                                                            Send email notification
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="d-flex align-items-center justify-content-end gap-3">
+                                            <button class="btn btn-dark">Send Response</button>
+                                            <button class="btn btn-success">Resolve and Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -360,18 +350,39 @@
 
     <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-sm modal-dialog-centered">
-             <div class="modal-content">
-                  <div class="modal-body rounded">
+            <div class="modal-content">
+                <div class="modal-body rounded">
                     <div class="d-flex align-items-center justify-content-center mb-2 mt-3">
                         <img src="asset/img/success-star-checked.png" width="50px" alt="icon">
                     </div>
-                       <h3 class="text-center mb-2">Success!</h3>
-                      <div class="text-center mb-2">
-                        You have successfully registered for a LiveLearn Session.
-                      </div>
-                        <button type="button" class="new-discussion-btn w-100 mb-2">Go Back</button>
-                  </div>
-             </div>
+                    <h3 class="text-center mb-2">Success!</h3>
+                    <div class="text-center mb-2">
+                        You have successfully deactivated <h6 class="d-inline">Williams Michael</h6>
+                    </div>
+                    <button type="button" class="new-discussion-btn w-100 mb-2" data-bs-dismiss="modal">Go Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="internModal" tabindex="-1" aria-labelledby="internModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body rounded">
+                    <div class="d-flex align-items-center justify-content-center mb-2 mt-3">
+                        <div class="student-img">
+                            <img src="asset/img/team3.png" alt="icon">
+                        </div>
+                    </div>
+                    <h6 class="text-center mb-2">Mary Williams</h6>
+                    <h5 class="text-center mb-5">Author</h5>
+                    <div class="d-flex align-items-center justify-content-between gap-4">
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#successModal"
+                            class="new-discussion-btn w-100 outline-danger text-center d-block mb-2">Deactivate</button>
+                        <a href="javascript:;" type="button" class="new-discussion-btn text-center w-100 mb-2">View</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -388,24 +399,13 @@
     <script src="vendor/moment/moment.min.js"></script>
     <script src="vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="vendor/fileuploads/js/fileupload.js"></script>
+    <script src="vendor/fileuploads/js/file-upload.js"></script>
+    <script src="vendor/summernote/summernote1.js"></script>
     <!-- <script src="asset/js/dashboard.js"></script> -->
+
     <script src="asset/js/plugins_init.js"></script>
     <script src="asset/js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function(){
-            document.getElementById('profile_picture').addEventListener('change', function(){
-                var input = this;
-                if (input.files && input.files[0]){
-                    var reader = new FileReader();
-                    reader.onload = function(e) {
-                        document.getElementById('imagePreview').innerHTML = '<img src="' + e.target.result + '" width="200" height="200" />';
-                    }
-   
-                    reader.readAsDataURL(input.files[0]);
-                }
-            })
-        })
-    </script>
 </body>
 
 </html>
